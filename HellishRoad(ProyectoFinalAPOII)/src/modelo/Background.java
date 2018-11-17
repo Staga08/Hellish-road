@@ -15,7 +15,7 @@ public class Background {
 	private String imagen;
 	private boolean avanzar;
 	private int velocidad;
-	private CaraAdversario enemigo;
+	
 	
 	
 	public Background() {
