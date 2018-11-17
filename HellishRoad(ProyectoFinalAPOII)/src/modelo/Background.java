@@ -8,7 +8,7 @@ public class Background {
 	public static final int LIMITESUPERIORDELBACKGROUND = 229;
 	public static final int LIMITEINFERIORDELBACKGROUND= 136;
 	public static final int POSINICIAL=0;
-	public static final int TAMAÑOPANEL=600;
+	public static final int TAMANHOPANEL=600;
 	
 	private int posXFirtsBack;
 	private int posXSecondBack;
@@ -33,8 +33,8 @@ public class Background {
 	}
 
 	public void moverImagen1() {
-		if(posXFirtsBack==TAMAÑOPANEL) {
-			posXFirtsBack=-TAMAÑOPANEL;
+		if(posXFirtsBack==TAMANHOPANEL) {
+			posXFirtsBack=-TAMANHOPANEL;
 		}else {
 			posXFirtsBack+=1;
 			}
@@ -53,8 +53,8 @@ public class Background {
 
 	
 	public void moverImagen2() {
-		if(posXSecondBack==TAMAÑOPANEL) {
-			posXSecondBack=-TAMAÑOPANEL;
+		if(posXSecondBack==TAMANHOPANEL) {
+			posXSecondBack=-TAMANHOPANEL;
 		}else {
 			posXSecondBack+=1;
 		}
