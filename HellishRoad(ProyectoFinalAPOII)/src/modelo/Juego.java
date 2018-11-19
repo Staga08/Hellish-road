@@ -1,5 +1,7 @@
 package modelo;
 
+import java.security.SecureRandom;
+
 public class Juego {
 	
 	private Background background;
@@ -50,16 +52,20 @@ public class Juego {
 	}
 	
 	public void crearEnemigos() {
-//		random.nextInt(X_MAX + 1 - (X_MIN))
+
 		CaraAdversario busta = new CaraAdversario("Busta", 10, 12, 100, 100, 5);
 		CaraAdversario yasmin = new CaraAdversario("yasmin", 10, 12, 100, 100, 5);
+		CaraAdversario yaker = new CaraAdversario("Jaker", 10, 12, 100, 100, 5);
 		
 		crearListaEnemigos(busta);
 		crearListaEnemigos(yasmin);
+		
 	}
 	
-	public void waves() {
-		
+	public CaraAdversario enemigoRadom() {
+		SecureRandom random = new SecureRandom();
+		int randomEnemigo = random.nextInt(10);
+		return enemigo.get(randomEnemigo);
 	}
 	
 
