@@ -30,9 +30,9 @@ public class CaraAdversario extends Cara {
 		}
 		return temp;
 	}
-
-
-
-
-
+	
+	public void reset() {
+		  setPosX(400);
+	}
+	
 }
