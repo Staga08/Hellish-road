@@ -2,7 +2,7 @@ package modelo;
 
 public interface IConstantes {
 	public static final String SELECTION1="";
-	public static final String FARIÑEZ="";
+	public static final String FARINEZ="";
 	public static final String SELECTION2="";
 	public static final String BRITO="";
 	public static final String SELECTION3="";
@@ -23,7 +23,7 @@ public interface IConstantes {
 	public final static CaraJugador[] PLAYERS= {
 			new CaraJugador(BRITO, POSYINICIALCARA, POSXINICIALCARA,TAMANHOCARA, TAMANHOCARA,VELOCIDADI),	
 			new CaraJugador(BRYAN, POSYINICIALCARA, POSXINICIALCARA, TAMANHOCARA, TAMANHOCARA, VELOCIDADI),
-			new CaraJugador(FARIÑEZ, POSYINICIALCARA, POSXINICIALCARA, TAMANHOCARA, TAMANHOCARA, VELOCIDADI)
+			new CaraJugador(FARINEZ, POSYINICIALCARA, POSXINICIALCARA, TAMANHOCARA, TAMANHOCARA, VELOCIDADI)
 	
 	
 	};
