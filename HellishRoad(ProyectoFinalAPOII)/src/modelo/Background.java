@@ -1,14 +1,10 @@
 package modelo;
 
-public class Background {
+public class Background implements IConstantes{
 	
 	public static final String DABACKGROUND = "data/background.gif";
-	public static final int POSYINICIALCARA = 450;
-	public static final int POSXINICALCARA = 176;
-	public static final int LIMITESUPERIORDELBACKGROUND = 229;
-	public static final int LIMITEINFERIORDELBACKGROUND= 136;
-	public static final int POSINICIAL=0;
-	public static final int TAMANHOPANEL=600;
+	
+	
 	
 	private int posXFirtsBack;
 	private int posXSecondBack;

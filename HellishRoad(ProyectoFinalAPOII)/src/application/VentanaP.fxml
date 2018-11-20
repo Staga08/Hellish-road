@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
-	
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VentanaPController">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.layout.Pane?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="application.VentanaPController">
+   <center>
+      <Pane prefHeight="329.0" prefWidth="441.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imagendeprueba" fitHeight="150.0" fitWidth="200.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+   </center>
 </BorderPane>

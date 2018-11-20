@@ -2,13 +2,7 @@ package modelo;
 
 public class CaraJugador extends Cara {
 	
-//	public static final String 1SELECTION=;
-//	public static final String FARIÑEZ=;
-//	public static final String 2SELECTION=;
-//	public static final String BRITO=;
-//	public static final String 3SELECTION=;
-//	public static final String BRYAN=;
-	
+
 	private boolean movimientoArriba;
 	private boolean movimientoAbajo;
 	
