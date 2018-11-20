@@ -43,20 +43,20 @@ public class Juego {
         	enemigo = nuevo;
         } else{    
         	CaraAdversario aux = enemigo;
-//            while(aux.getSiguiente() != null){
-//                aux = aux.getSiguiente();
-//            }
+            while(aux.getSiguiente() != null){
+                aux = aux.getSiguiente();
+            }
             aux.setSiguiente(nuevo);
-            crearListaEnemigos(aux.getSiguiente());
+//            crearListaEnemigos(aux.getSiguiente());
         }
         tamanio++;
 	}
 	
 	public void crearEnemigos() {
 
-		CaraAdversario busta = new CaraAdversario("Busta", 10, 12, 100, 100, 5);
-		CaraAdversario yasmin = new CaraAdversario("yasmin", 10, 12, 100, 100, 5);
-		CaraAdversario yaker = new CaraAdversario("Jaker", 10, 12, 100, 100, 5);
+		CaraAdversario busta = new CaraAdversario("data/busta.jpeg", 10, 12, 100, 100, 5);
+		CaraAdversario yasmin = new CaraAdversario("data/busta.jpeg", 10, 12, 100, 100, 5);
+		CaraAdversario yaker = new CaraAdversario("data/busta.jpeg", 10, 12, 100, 100, 5);
 		
 		crearListaEnemigos(busta);
 		crearListaEnemigos(yasmin);
@@ -65,7 +65,7 @@ public class Juego {
 	
 	public CaraAdversario enemigoRadom() {
 		SecureRandom random = new SecureRandom();
-		int randomEnemigo = random.nextInt(10);
+		int randomEnemigo = random.nextInt(2);
 		return enemigo.get(randomEnemigo);
 	}
 	
