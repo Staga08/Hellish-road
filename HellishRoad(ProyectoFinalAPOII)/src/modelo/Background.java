@@ -2,20 +2,30 @@ package modelo;
 
 public class Background implements IConstantes{
 	
-	public static final String DABACKGROUND = "data/background.gif";
 	
 	
 	
+	private int limiteBoundSuperior;
+	private int limiteBoundInferior;
 	private int posXFirtsBack;
 	private int posXSecondBack;
 	private String imagen;
 	private boolean avanzar;
 	private int velocidad;
+	private CaraJugador seleccionado;
+	private CaraJugador disponibles;
+	
 	
 	
 	
 	public Background() {
 		imagen=	DABACKGROUND;
+		disponibles=PLAYERS[0];
+		disponibles.setSiguiente(PLAYERS[1]);
+		disponibles.getSiguiente().setSiguiente(PLAYERS[2]);
+	
+	
+	
 	}
 
 

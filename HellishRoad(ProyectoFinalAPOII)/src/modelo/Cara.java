@@ -8,6 +8,8 @@ public class Cara {
 	private int anchoImagen;
 	private int altoImagen;
 	private int velocidad;
+	private Cara anterior;
+	private Cara siguiente;
 	
 	
 	public Cara(String imagen, int posX, int posY,int anchoImagen, int altoImagen, int velocidad) {
@@ -17,7 +19,7 @@ public class Cara {
 		this.anchoImagen=anchoImagen;
 		this.altoImagen=altoImagen;
 		this.velocidad=velocidad;
-		
+		anterior=siguiente=null;
 	}
 
 
@@ -92,12 +94,32 @@ public class Cara {
 	
 	
 	public void moverAdelante() {
-		posY-=1;
+		posX-=1;
 	}
 	
 	
 	public void moverAtras() {
-		posY+=1;
+		posX+=1;
+	}
+
+
+	public Cara getAnterior() {
+		return anterior;
+	}
+
+
+	public void setAnterior(Cara anterior) {
+		this.anterior = anterior;
+	}
+
+
+	public Cara getSiguiente() {
+		return siguiente;
+	}
+
+
+	public void setSiguiente(Cara siguiente) {
+		this.siguiente = siguiente;
 	}
 
 
