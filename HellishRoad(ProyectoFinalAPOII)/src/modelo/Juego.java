@@ -43,10 +43,11 @@ public class Juego {
         	enemigo = nuevo;
         } else{    
         	CaraAdversario aux = enemigo;
-            while(aux.getSiguiente() != null){
-                aux = aux.getSiguiente();
-            }
+//            while(aux.getSiguiente() != null){
+//                aux = aux.getSiguiente();
+//            }
             aux.setSiguiente(nuevo);
+            crearListaEnemigos(aux.getSiguiente());
         }
         tamanio++;
 	}
