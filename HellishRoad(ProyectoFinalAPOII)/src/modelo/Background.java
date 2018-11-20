@@ -19,10 +19,13 @@ public class Background implements IConstantes{
 	
 	
 	public Background() {
+		
 		imagen=	DABACKGROUND;
 		disponibles=PLAYERS[0];
 		disponibles.setSiguiente(PLAYERS[1]);
 		disponibles.getSiguiente().setSiguiente(PLAYERS[2]);
+		limiteBoundSuperior=LIMITESUPERIORDELBACKGROUND;
+		limiteBoundInferior=LIMITEINFERIORDELBACKGROUND;
 	
 	
 	
@@ -83,6 +86,46 @@ public class Background implements IConstantes{
 
 	public void avanzar() {
 		avanzar=true;
+	}
+
+
+	public int getLimiteBoundSuperior() {
+		return limiteBoundSuperior;
+	}
+
+
+	public void setLimiteBoundSuperior(int limiteBoundSuperior) {
+		this.limiteBoundSuperior = limiteBoundSuperior;
+	}
+
+
+	public int getLimiteBoundInferior() {
+		return limiteBoundInferior;
+	}
+
+
+	public void setLimiteBoundInferior(int limiteBoundInferior) {
+		this.limiteBoundInferior = limiteBoundInferior;
+	}
+
+
+	public CaraJugador getSeleccionado() {
+		return seleccionado;
+	}
+
+
+	public void setSeleccionado(CaraJugador seleccionado) {
+		this.seleccionado = seleccionado;
+	}
+
+
+	public CaraJugador getDisponibles() {
+		return disponibles;
+	}
+
+
+	public void setDisponibles(CaraJugador disponibles) {
+		this.disponibles = disponibles;
 	}
 
 	
