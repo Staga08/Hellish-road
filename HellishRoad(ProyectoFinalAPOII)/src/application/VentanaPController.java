@@ -13,6 +13,7 @@ public class VentanaPController {
 	@FXML private ImageView enemigo1;
 	@FXML private ImageView enemigo2;
 	@FXML private ImageView enemigo3;
+	@FXML private ImageView jugador;
 	
 	public VentanaPController() {
 		
@@ -36,6 +37,8 @@ public class VentanaPController {
 		enemigo1.setFitWidth(100);
 	}
 	
-	
+//	public void cargarJugador() {
+//		background.setImage(new Image(new File(Main.getJ())));
+//	}
 	
 }

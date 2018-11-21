@@ -2,7 +2,7 @@ package modelo;
 
 import java.security.SecureRandom;
 
-public class Juego {
+public class Juego implements IConstantes{
 	
 	private Background background;
 	private CaraAdversario enemigo;
@@ -54,12 +54,9 @@ public class Juego {
 	
 	public void crearEnemigos() {
 
-		CaraAdversario busta = new CaraAdversario("data/busta.jpeg", 10, 12, 100, 100, 5);
-		CaraAdversario yasmin = new CaraAdversario("data/busta.jpeg", 10, 12, 100, 100, 5);
-		CaraAdversario yaker = new CaraAdversario("data/busta.jpeg", 10, 12, 100, 100, 5);
 		
-		crearListaEnemigos(busta);
-		crearListaEnemigos(yasmin);
+		crearListaEnemigos(ENEMIES[3]);
+		crearListaEnemigos(ENEMIES[4]);
 		
 	}
 	
@@ -69,5 +66,14 @@ public class Juego {
 		return enemigo.get(randomEnemigo);
 	}
 	
+
+	public void crearJugador() {
+		
+	}
+
+
+
+
+
 
 }
