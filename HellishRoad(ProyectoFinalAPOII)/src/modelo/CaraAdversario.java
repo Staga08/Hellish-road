@@ -18,19 +18,7 @@ public class CaraAdversario extends Cara {
 	public void setSiguiente(CaraAdversario siguiente) {
 		this.siguiente = siguiente;
 	}
-	
-	public CaraAdversario get(int index) {
-		int c = 0;
-		CaraAdversario temp = siguiente;
-		if (c<index) {
-			while (siguiente!=null) {
-				temp=siguiente.getSiguiente();
-			}
-			c++;
-		}
-		return temp;
-	}
-	
+
 	public void reset() {
 		  setPosX(400);
 	}

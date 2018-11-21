@@ -32,8 +32,10 @@ public class VentanaPController {
 	public void cagarEnemigos() {
 		Main.getJ().crearEnemigos();
 		enemigo1.setImage(new Image(new File(Main.getJ().enemigoRadom().getImagen()).toURI().toString()));
-		enemigo1.setFitHeight(100);
-		enemigo1.setFitWidth(100);
+		enemigo1.setFitHeight(80);
+		enemigo1.setFitWidth(80);
+		enemigo1.setLayoutX(Main.getJ().enemigoRadom().getPosX());
+		enemigo1.setLayoutY(Main.getJ().enemigoRadom().getPosY());
 	}
 	
 	
