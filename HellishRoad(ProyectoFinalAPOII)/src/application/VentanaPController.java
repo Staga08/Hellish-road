@@ -22,6 +22,7 @@ public class VentanaPController {
 	public void initialize() {
 		cargarBackground();
 		cagarEnemigos();
+		cargarJugador();
 	}
 	
 	public void cargarBackground() {
@@ -37,8 +38,8 @@ public class VentanaPController {
 		enemigo1.setFitWidth(100);
 	}
 	
-//	public void cargarJugador() {
-//		background.setImage(new Image(new File(Main.getJ())));
-//	}
+	public void cargarJugador() {
+		jugador.setImage(new Image(new File(Main.getJ().getJugador().getImagen()).toURI().toString()));
+	}
 	
 }

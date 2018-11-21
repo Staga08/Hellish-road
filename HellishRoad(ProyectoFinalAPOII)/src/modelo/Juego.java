@@ -55,8 +55,8 @@ public class Juego implements IConstantes{
 	public void crearEnemigos() {
 
 		
-		crearListaEnemigos(ENEMIES[3]);
-		crearListaEnemigos(ENEMIES[4]);
+		crearListaEnemigos(ENEMIES[0]);
+		crearListaEnemigos(ENEMIES[1]);
 		
 	}
 	
@@ -67,9 +67,29 @@ public class Juego implements IConstantes{
 	}
 	
 
+	public void crearListaJugadores(CaraJugador caraJ) {
+		CaraJugador nuevo = caraJ;
+        if (jugador==null) {
+        	jugador = nuevo;
+        } else{    
+        	CaraJugador aux = jugador;
+            while(aux.getSiguiente() != null){
+                aux = aux.getSiguiente();
+            }
+            aux.setSiguiente(nuevo);
+//            crearListaEnemigos(aux.getSiguiente());
+        }
+        tamanio++;
+
+	}
+
+
 	public void crearJugador() {
+		crearListaJugadores(PLAYERS[0]);
 		
 	}
+
+	
 
 
 

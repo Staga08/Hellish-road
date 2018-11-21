@@ -12,7 +12,7 @@
             <ImageView fx:id="enemigo1" fitHeight="150.0" fitWidth="200.0" layoutX="475.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="enemigo2" fitHeight="150.0" fitWidth="200.0" layoutX="460.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="enemigo3" fitHeight="150.0" fitWidth="200.0" layoutX="462.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="jugador" fitHeight="150.0" fitWidth="200.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
    </center>

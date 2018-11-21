@@ -2,7 +2,9 @@ package modelo;
 
 public class CaraJugador extends Cara {
 	
-
+	private CaraJugador siguiente;
+	
+	
 	private boolean movimientoArriba;
 	private boolean movimientoAbajo;
 	
@@ -56,6 +58,12 @@ public class CaraJugador extends Cara {
 		movimientoArriba=true;
 	}
 
+	public CaraJugador getSiguiente() {
+		return siguiente;
+	}
 
+	public void setSiguiente(CaraJugador siguiente) {
+		this.siguiente = siguiente;
+	}
 
 }

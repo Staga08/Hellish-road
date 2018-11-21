@@ -5,7 +5,7 @@ public interface IConstantes {
 	public static final String SELECTION1="";
 	public static final String FARINEZ="";
 	public static final String SELECTION2="";
-	public static final String BRITO="";
+	public static final String BRITO="data/busta.jpeg";
 	public static final String SELECTION3="";
 	public static final String BRYAN="";
 	
