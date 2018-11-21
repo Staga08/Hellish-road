@@ -36,6 +36,16 @@ public class VentanaPController {
 		enemigo1.setFitWidth(80);
 		enemigo1.setLayoutX(Main.getJ().enemigoRadom().getPosX());
 		enemigo1.setLayoutY(Main.getJ().enemigoRadom().getPosY());
+		enemigo2.setImage(new Image(new File(Main.getJ().enemigoRadom().getImagen()).toURI().toString()));
+		enemigo2.setFitHeight(80);
+		enemigo2.setFitWidth(80);
+		enemigo2.setLayoutX(Main.getJ().enemigoRadom().getPosX());
+		enemigo2.setLayoutY(Main.getJ().enemigoRadom().getPosY());
+		enemigo3.setImage(new Image(new File(Main.getJ().enemigoRadom().getImagen()).toURI().toString()));
+		enemigo3.setFitHeight(80);
+		enemigo3.setFitWidth(80);
+		enemigo3.setLayoutX(Main.getJ().enemigoRadom().getPosX());
+		enemigo3.setLayoutY(Main.getJ().enemigoRadom().getPosY());
 	}
 	
 	
