@@ -1,6 +1,7 @@
 package modelo;
 
 public interface IConstantes {
+	
 	public static final String SELECTION1="";
 	public static final String FARINEZ="";
 	public static final String SELECTION2="";
@@ -19,6 +20,9 @@ public interface IConstantes {
 	public static final int LIMITEINFERIORDELBACKGROUND= 136;
 	public static final int POSINICIALBACK=0;
 	public static final int TAMANHOPANEL=600;
+	public static final long VELOCIDADMAXIMA = 1;
+	public static final long AUMENTOYDISMINUCION =1  ;
+	public static final long VELOCIDADINICIAL = 15;
 	
 	public final static CaraJugador[] PLAYERS= {
 			new CaraJugador(BRITO, POSYINICIALCARA, POSXINICIALCARA,TAMANHOCARA, TAMANHOCARA,VELOCIDADI),	

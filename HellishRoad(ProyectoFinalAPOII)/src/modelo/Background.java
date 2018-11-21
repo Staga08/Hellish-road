@@ -128,9 +128,51 @@ public class Background implements IConstantes{
 		this.disponibles = disponibles;
 	}
 
-	
+	public void moverBackground() {
+		if(avanzar==true) {
+			moverImagen2();
+			moverImagen1();
+		}else if(velocidad<VELOCIDADINICIAL) {
+			moverImagen2();
+			moverImagen1();
+		}
+		
+		System.out.println(""+velocidad);
+	}
 
+
+	public void velocidad() {
+		if(avanzar && velocidad>VELOCIDADMAXIMA) {
+			velocidad-=AUMENTOYDISMINUCION;
+		}else if(!avanzar && velocidad<VELOCIDADINICIAL) {
+				velocidad+=AUMENTOYDISMINUCION;
+		}
 		
 
+	}
+
+	public void moverArriba() {
+		seleccionado.seMueveArriba();
+	}
+
+	public void noMoverArriba() {
+		seleccionado.noMoverArriba();
+		
+	}
+
+	public void moverAbajo() {
+		seleccionado.seMueveAbajo();
+		
+	}
+	
+	public void noMoverAbajo() {
+		seleccionado.noMoverAbajo();
+		
+	}
+
+	public void moverAuto() {
+		seleccionado.moverCara(limiteBoundSuperior,limiteBoundInferior);
+		
+	}
 
 }

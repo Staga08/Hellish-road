@@ -37,9 +37,24 @@ public class CaraJugador extends Cara {
 		
 	}
 
+	public void noMoverArriba() {
+		movimientoArriba=false;
+	}
 
+	
+	public void noMoverAbajo() {
+		movimientoArriba=false;
+	}
 
+	
+	public void seMueveArriba() {
+		movimientoArriba=true;
+	}
 
+	
+	public void seMueveAbajo() {
+		movimientoArriba=true;
+	}
 
 
 
