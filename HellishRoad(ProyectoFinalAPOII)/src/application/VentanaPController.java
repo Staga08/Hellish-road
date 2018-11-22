@@ -75,10 +75,13 @@ public class VentanaPController {
 			Main.getJ().get(2).moverAdelante();
 			enemigo1.setX(Main.getJ().get(0).getPosX());
 			enemigo1.setY(Main.getJ().get(0).getPosY());
+//			enemigo1.setImage(new Image(new File(Main.getJ().get(0).getImagen()).toURI().toString()));
 			enemigo2.setX(Main.getJ().get(1).getPosX());
 			enemigo2.setY(Main.getJ().get(1).getPosY());
+//			enemigo2.setImage(new Image(new File(Main.getJ().get(1).getImagen()).toURI().toString()));
 			enemigo3.setX(Main.getJ().get(2).getPosX());
 			enemigo3.setY(Main.getJ().get(2).getPosY());
+//			enemigo3.setImage(new Image(new File(Main.getJ().get(2).getImagen()).toURI().toString()));
 		}));
 		hilo.setCycleCount(Timeline.INDEFINITE);
 		hilo.play();

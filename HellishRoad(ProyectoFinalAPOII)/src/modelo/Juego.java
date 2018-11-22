@@ -1,11 +1,20 @@
 package modelo;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.security.SecureRandom;
+import java.util.ArrayList;
 
 
 
 
 import excepciones.JugadorNoEncontradoException;
+import javax.crypto.spec.IvParameterSpec;
+
+
 import excepciones.PuntajeNoExisteException;
 
 public class Juego implements IConstantes{
@@ -16,9 +25,10 @@ public class Juego implements IConstantes{
 	private CaraJugador jugador;
 	private Jugador usuario;
 	private int tamanio;
+	private ArrayList<Jugador> users;
 	
 	public Juego() {
-		
+		users = new ArrayList<Jugador>();
 	}
 
 	public Background getBackground() {
@@ -71,6 +81,8 @@ public class Juego implements IConstantes{
 		crearListaEnemigos(ENEMIES[0]);
 		crearListaEnemigos(ENEMIES[1]);
 
+		//CaraAdversario yaker = new CaraAdversario("data/jackTheRipper.jpeg", 500, 62, 100, 100, 5);
+		
 		crearListaEnemigos(busta);
 		crearListaEnemigos(frapi);
 		crearListaEnemigos(yaker);
@@ -98,19 +110,22 @@ public class Juego implements IConstantes{
 	
 	public void resetEnemigos() {
 		SecureRandom random = new SecureRandom();
-		int randomEnemigo = random.nextInt(330);
+		int randomPosY = random.nextInt(330);
 		
 		if (get(0).getPosX()<0) {
 			get(0).setPosX(700);
-			get(0).setPosY(randomEnemigo);
+			get(0).setPosY(randomPosY);
+			get(0).setImagen(enemigoRadom().getImagen());
 		}
 		if (get(1).getPosX()<0) {
 			get(1).setPosX(700);
-			get(1).setPosY(randomEnemigo);
+			get(1).setPosY(randomPosY);
+			get(1).setImagen(enemigoRadom().getImagen());
 		}
 		if (get(2).getPosX()<0) {
 			get(2).setPosX(700);
-			get(2).setPosY(randomEnemigo);
+			get(2).setPosY(randomPosY);
+			get(2).setImagen(enemigoRadom().getImagen());
 		}
 	}
 	
@@ -155,7 +170,66 @@ public class Juego implements IConstantes{
 				}
 			}
 		}
-	}
+	} 
+	
+//	public void listaUsuarios() {
+//        if (usuario.getIzq()!=null) {
+//			usuario.getIzq().;
+//		}
+//        acumulado.add(nombre);
+//        
+//        if (usuario.getDer()!=null) {
+//			usuario.getIzq().inorden(acumulado);
+//		}
+//	}
+//	
+//	public void guardar() {
+//		FileOutputStream fS = null;
+//		ObjectOutputStream oS = null;
+//		try {
+//			fS = new FileOutputStream("src/data/Ranking.ser");
+//			oS = new ObjectOutputStream(fS);
+//			oS.writeObject(usuario);
+//		} catch (IOException ex) {
+//			System.out.println(ex.getMessage());
+//		} finally {
+//			try {
+//				if (usuario != null) {
+//					fS.close();
+//				}
+//				if (oS != null) {
+//					oS.close();
+//				}
+//			} catch (IOException ex) {
+//				System.out.println(ex.getMessage());
+//			}
+//		}
+//	}
+//	
+//	public void recuperarData() {
+//		FileInputStream fS = null;
+//		ObjectInputStream oS = null;
+//		ArrayList<Jugador> users = null;
+//		try {
+//			fS = new FileInputStream("src/data/Ranking.ser");
+//			oS = new ObjectInputStream(fS);
+//			users = (ArrayList<Jugador>) oS.readObject();
+////			setJugadores(users);
+//		} catch (Exception ex) {
+//			System.out.println(ex.getMessage());
+//		} finally {
+//			try {
+//				if (fS != null) {
+//					fS.close();
+//				}
+//				if (oS != null) {
+//					oS.close();
+//				}
+//			} catch (IOException e) {
+//				System.out.println(e.getMessage());
+//			}
+//		}
+//	}
 	
 }
 
