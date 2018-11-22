@@ -87,6 +87,24 @@ public class Juego {
 		return get(randomEnemigo);
 	}
 	
+	public void resetEnemigos() {
+		SecureRandom random = new SecureRandom();
+		int randomEnemigo = random.nextInt(330);
+		
+		if (get(0).getPosX()<0) {
+			get(0).setPosX(700);
+			get(0).setPosY(randomEnemigo);
+		}
+		if (get(1).getPosX()<0) {
+			get(1).setPosX(700);
+			get(1).setPosY(randomEnemigo);
+		}
+		if (get(2).getPosX()<0) {
+			get(2).setPosX(700);
+			get(2).setPosY(randomEnemigo);
+		}
+	}
+	
 	public void agregarUsuarios(Jugador actual, Jugador nuevo) {
 		if (usuario==null) {
 			usuario=nuevo;

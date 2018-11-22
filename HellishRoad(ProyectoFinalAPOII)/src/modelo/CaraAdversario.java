@@ -18,9 +18,5 @@ public class CaraAdversario extends Cara {
 	public void setSiguiente(CaraAdversario siguiente) {
 		this.siguiente = siguiente;
 	}
-
-	public void reset() {
-		  setPosX(400);
-	}
 	
 }
