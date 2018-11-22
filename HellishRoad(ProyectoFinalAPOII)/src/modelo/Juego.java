@@ -7,6 +7,7 @@ public class Juego {
 	private Background background;
 	private CaraAdversario enemigo;
 	private CaraJugador jugador;
+	private Jugador usuario;
 	private int tamanio;
 	
 	public Juego() {
@@ -81,6 +82,29 @@ public class Juego {
 		SecureRandom random = new SecureRandom();
 		int randomEnemigo = random.nextInt(3);
 		return get(randomEnemigo);
+	}
+	
+	public void agregarUsuarios(Jugador actual, Jugador nuevo) {
+		if (usuario==null) {
+			usuario=nuevo;
+		}else {
+			if (nuevo.getPuntaje()<=actual.getPuntaje()) {
+				if (actual.getIzq()==null) {
+					actual.setIzq(nuevo);
+				}else {
+					agregarUsuarios(actual.getIzq(), nuevo);
+				}
+			
+			}else {
+				if (nuevo.getPuntaje()>=actual.getPuntaje()) {
+					if (actual.getDer()==null) {
+						actual.setDer(nuevo);
+					}else {
+						agregarUsuarios(actual.getDer(), nuevo);
+					}
+				}
+			}
+		}
 	}
 	
 
