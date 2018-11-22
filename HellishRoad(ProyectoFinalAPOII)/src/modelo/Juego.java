@@ -2,6 +2,9 @@ package modelo;
 
 import java.security.SecureRandom;
 
+import excepciones.JugadorNoEncontradoException;
+import excepciones.PuntajeNoExisteException;
+
 public class Juego {
 	
 	private Background background;
@@ -102,6 +105,26 @@ public class Juego {
 					}else {
 						agregarUsuarios(actual.getDer(), nuevo);
 					}
+				}
+			}
+		}
+	}
+	
+	public Jugador buscarPuntaje(Jugador actual, int puntaje) throws PuntajeNoExisteException {
+		if(actual.getPuntaje()==puntaje) {
+			return actual;
+		}else {
+			if(puntaje<actual.getPuntaje()) {
+				if(actual.getIzq()!=null) {
+					return buscarPuntaje(actual.getIzq(), puntaje);
+				}else {
+					throw new PuntajeNoExisteException(puntaje);
+				}
+			}else {
+				if(actual.getDer()!=null) {
+					return buscarPuntaje(actual.getDer(), puntaje);
+				}else {
+					throw new PuntajeNoExisteException(puntaje);
 				}
 			}
 		}
