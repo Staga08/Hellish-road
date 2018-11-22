@@ -2,9 +2,12 @@ package application;
 
 import java.io.File;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.util.Duration;
 import modelo.IConstantes;
 
 public class VentanaPController {
@@ -13,6 +16,7 @@ public class VentanaPController {
 	@FXML private ImageView enemigo1;
 	@FXML private ImageView enemigo2;
 	@FXML private ImageView enemigo3;
+	@FXML private Timeline hilo;
 	
 	public VentanaPController() {
 		
@@ -21,6 +25,7 @@ public class VentanaPController {
 	public void initialize() {
 		cargarBackground();
 		cagarEnemigos();
+		moverEnemigos();
 	}
 	
 	public void cargarBackground() {
@@ -47,6 +52,18 @@ public class VentanaPController {
 		enemigo3.setLayoutX(Main.getJ().enemigoRadom().getPosX());
 		enemigo3.setLayoutY(Main.getJ().enemigoRadom().getPosY());
 	}
+	
+	public void moverEnemigos() {
+		hilo = new Timeline(new KeyFrame(Duration.millis(30), f-> {
+			Main.getJ().getEnemigo().moverAdelante();
+			enemigo1.setX(Main.getJ().getEnemigo().getPosX());
+			enemigo2.setX(Main.getJ().getEnemigo().getPosX());
+			enemigo3.setX(Main.getJ().getEnemigo().getPosX());
+		}));
+		hilo.setCycleCount(Timeline.INDEFINITE);
+		hilo.play();
+	}
+
 	
 	
 	
