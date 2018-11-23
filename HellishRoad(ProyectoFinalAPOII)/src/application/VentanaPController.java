@@ -16,9 +16,7 @@ public class VentanaPController {
 	@FXML private ImageView enemigo1;
 	@FXML private ImageView enemigo2;
 	@FXML private ImageView enemigo3;
-
 	@FXML private ImageView jugador;
-
 	@FXML private Timeline hilo;
 
 	
@@ -31,6 +29,7 @@ public class VentanaPController {
 		cagarEnemigos();
 
 		moverEnemigos();
+		moverBackground();
 	}
 	
 	public void cargarBackground() {
@@ -58,14 +57,6 @@ public class VentanaPController {
 //		enemigo3.setLayoutY(Main.getJ().get(2).getPosY());
 	}
 	
-//	public void cargarJugador() {
-//		Main.getJ().crearJugador();
-//		jugador.setImage(new Image(new File(Main.getJ().getJugador().getImagen()).toURI().toString()));
-//		jugador.setFitHeight(100);
-//		jugador.setFitHeight(100);
-//	
-//	}
-//	
 
 	public void moverEnemigos() {
 		hilo = new Timeline(new KeyFrame(Duration.millis(30), f-> {
@@ -87,7 +78,15 @@ public class VentanaPController {
 		hilo.play();
 	}
 
-	
+	public void moverBackground() {
+		hilo= new Timeline(new KeyFrame(Duration.millis(30), f->{
+			Main.getJ().getBackground().getVelocidad();
+			Main.getJ().getBackground().moverBackground();
+		
+		
+		
+		}));
+	}
 	
 	
 }

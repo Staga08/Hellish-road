@@ -26,6 +26,7 @@ public class Background implements IConstantes{
 		disponibles.getSiguiente().setSiguiente(PLAYERS[2]);
 		limiteBoundSuperior=LIMITESUPERIORDELBACKGROUND;
 		limiteBoundInferior=LIMITEINFERIORDELBACKGROUND;
+		velocidad=(int) VELOCIDADINICIAL;
 	
 	
 	
@@ -173,6 +174,16 @@ public class Background implements IConstantes{
 	public void moverAuto() {
 		seleccionado.moverCara(limiteBoundSuperior,limiteBoundInferior);
 		
+	}
+
+
+	public int getVelocidad() {
+		return velocidad;
+	}
+
+
+	public void setVelocidad(int velocidad) {
+		this.velocidad = velocidad;
 	}
 
 }
