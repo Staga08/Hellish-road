@@ -8,11 +8,17 @@ import java.io.ObjectOutputStream;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 
+
+
+
+import excepciones.JugadorNoEncontradoException;
 import javax.crypto.spec.IvParameterSpec;
+
 
 import excepciones.PuntajeNoExisteException;
 
-public class Juego {
+public class Juego implements IConstantes{
+
 	
 	private Background background;
 	private CaraAdversario enemigo;
@@ -75,13 +81,17 @@ public class Juego {
 	
 	public void crearEnemigos() {
 
+
 		CaraAdversario busta = new CaraAdversario("data/busta.jpeg", 300, 12, 100, 100, 5);
 		CaraAdversario frapi = new CaraAdversario("data/frapi.jpeg", 400, 200, 100, 100, 5);
-		CaraAdversario yaker = new CaraAdversario("data/jackTheRipper.jpeg", 500, 62, 100, 100, 5);
+		CaraAdversario yaker = new CaraAdversario("data/jackTheRipper.jpeg", 450, 62, 100, 100, 5);
+
+		//CaraAdversario yaker = new CaraAdversario("data/jackTheRipper.jpeg", 500, 62, 100, 100, 5);
 		
 		crearListaEnemigos(busta);
 		crearListaEnemigos(frapi);
 		crearListaEnemigos(yaker);
+
 		
 	}
 	
@@ -89,7 +99,7 @@ public class Juego {
 		int c = 0;
 		CaraAdversario temp = enemigo;
 		
-			while (temp!=null&&c<index) {
+			while (temp!=null && c<index) {
 				
 				temp=temp.getSiguiente();
 				c++;
@@ -226,5 +236,12 @@ public class Juego {
 //		}
 //	}
 	
-
 }
+
+	
+
+
+
+
+
+
