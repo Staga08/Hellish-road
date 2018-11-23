@@ -44,9 +44,17 @@ public class Juego {
 	public CaraJugador getJugador() {
 		return jugador;
 	}
+	
+	public void mover() {
+		
+	}
 
 	public void setJugador(CaraJugador jugador) {
 		this.jugador = jugador;
+	}
+	
+	public void crearJugador() {
+		jugador = new CaraJugador(IConstantes.BRYAN, 20, 200, 100, 100, 10);
 	}
 	
 	public void crearListaEnemigos(CaraAdversario caraEnemigo) {

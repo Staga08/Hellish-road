@@ -1,12 +1,16 @@
 package application;
 
+import java.awt.Event;
+import java.awt.RenderingHints.Key;
 import java.io.File;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.util.Duration;
 import modelo.IConstantes;
 
@@ -17,6 +21,8 @@ public class VentanaPController {
 	@FXML private ImageView enemigo2;
 	@FXML private ImageView enemigo3;
 	@FXML private Timeline hilo;
+	@FXML private ImageView jugador;
+	@FXML private Button j;
 	
 	public VentanaPController() {
 		
@@ -26,6 +32,8 @@ public class VentanaPController {
 		cargarBackground();
 		cagarEnemigos();
 		moverEnemigos();
+		cargarJugador();
+		moverJugador();
 	}
 	
 	public void cargarBackground() {
@@ -72,8 +80,22 @@ public class VentanaPController {
 		hilo.setCycleCount(Timeline.INDEFINITE);
 		hilo.play();
 	}
-
+	public void cargarJugador() {
+		Main.getJ().crearJugador();
+		jugador.setImage(new Image(new File(Main.getJ().getJugador().getImagen()).toURI().toString()));
+		jugador.setFitHeight(80);
+		jugador.setFitWidth(80);
+		jugador.setLayoutX(100);
+		jugador.setLayoutY(100);
+	}
 	
+	public void moverJugador() {
+		j.setOnKeyPressed(e ->{
+			if (e.getCode()==KeyCode.UP) {
+				System.out.println("you has pressed");
+			}
+		});
+	}
 	
 	
 }

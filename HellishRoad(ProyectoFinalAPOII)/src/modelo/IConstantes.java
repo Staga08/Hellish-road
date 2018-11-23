@@ -6,7 +6,7 @@ public interface IConstantes {
 	public static final String SELECTION2="";
 	public static final String BRITO="";
 	public static final String SELECTION3="";
-	public static final String BRYAN="";
+	public static final String BRYAN="data/frapi.jpeg";
 	
 	public static final int POSYINICIALCARA = 450;
 	public static final int POSXINICIALCARA = 176;
